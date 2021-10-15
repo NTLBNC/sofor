@@ -1,0 +1,35 @@
+.container{
+    padding-top: 100px; 
+}
+
+.col {
+   align-items: center;
+   display: flex;
+   justify-content: space-around;
+}
+
+.btn-primary{
+    background-color: tomato;
+    border: none;
+    width: 90%;
+     -webkit-animation: scaledown .4s ease;
+  animation: scaledown .4s linear;
+  animation-fill-mode: forwards;
+  transform-origin: 50% 50%;
+
+}
+
+
+
+.card{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  text-align:  center;
+ 
+ 
+
+}
+
+
+
