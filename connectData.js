@@ -31,7 +31,7 @@ var url = 'https://driveral.com/hu/api/jobs?uid=3e7ccfff-eab8-40b3-b055-98fbd40c
 
                           const  headimg = document.createElement("img");
                           headimg.classList.add("card-img-top") ;
-                          headimg.setAttribute("src", "source/BHStrans.png")
+                          headimg.setAttribute("src", data.data[i].company_image)
                           card.appendChild(headimg);
                                 
                               cardbody = document.createElement("div");
@@ -40,7 +40,7 @@ var url = 'https://driveral.com/hu/api/jobs?uid=3e7ccfff-eab8-40b3-b055-98fbd40c
 
                                 const cim = document.createElement("h5");
                                     cim.classList.add('card-title');
-                                    cim.textContent = data.data[i].licence;
+                                    cim.textContent ="Szükséges jogosítvány: " + data.data[i].license;
                                     cardbody.appendChild(cim);
             
                                 const text = document.createElement("p");
