@@ -32,6 +32,7 @@ var url = 'https://driveral.com/hu/api/jobs?uid=3e7ccfff-eab8-40b3-b055-98fbd40c
                           const  headimg = document.createElement("img");
                           headimg.classList.add("card-img-top") ;
                           headimg.setAttribute("src", data.data[i].company_image)
+                          headimg.setAttribute("height", "110px")
                           card.appendChild(headimg);
                                 
                               cardbody = document.createElement("div");
@@ -49,8 +50,16 @@ var url = 'https://driveral.com/hu/api/jobs?uid=3e7ccfff-eab8-40b3-b055-98fbd40c
                                     cardbody.appendChild(text);
 
                                 const ber = document.createElement("b");
+                                    if(data.data[i] != "")
+                                    {
                                       ber.textContent = data.data[i].payment;
-                                    cardbody.appendChild(ber)
+                                      cardbody.appendChild(ber);
+                                    }else {
+                                      ber.textContent = "Nincs megadva bérsáv";
+                                      cardbody.appendChild(ber);
+                                     }
+                                      
+                                    
 
                                     const btn = document.createElement("a");
                                       btn.classList.add("btn");
@@ -70,19 +79,6 @@ var url = 'https://driveral.com/hu/api/jobs?uid=3e7ccfff-eab8-40b3-b055-98fbd40c
     
     
     
-      /* */
-        
-       /* let 
-
-
-       
-       
-        let 
-
-
-
-           ;*/
-            
 
 
     });
